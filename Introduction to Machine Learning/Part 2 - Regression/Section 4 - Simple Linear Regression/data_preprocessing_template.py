@@ -28,3 +28,22 @@ y_train = sc_y.fit_transform(y_train)"""
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train,y_train)
+
+#Predicting
+y_pred = regressor.predict(X_test)
+
+# Training set results
+plt.scatter(X_train, y_train, color="black")
+plt.plot(X_train, regressor.predict(X_train), color="blue")
+plt.title("Training vs Predicred")
+plt.xlabel("Years")
+plt.ylabel("Salary")
+plt.show()
+
+# Test set results
+plt.scatter(X_test, y_test, color="black")
+plt.plot(X_train, regressor.predict(X_train), color="blue")
+plt.title("Training vs Predicred")
+plt.xlabel("Years")
+plt.ylabel("Salary")
+plt.show()
