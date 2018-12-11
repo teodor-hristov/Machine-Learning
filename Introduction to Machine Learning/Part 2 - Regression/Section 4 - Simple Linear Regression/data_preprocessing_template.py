@@ -43,7 +43,7 @@ plt.show()
 # Test set results
 plt.scatter(X_test, y_test, color="black")
 plt.plot(X_train, regressor.predict(X_train), color="blue")
-plt.title("Training vs Predicred")
+plt.title("Test vs Predicred")
 plt.xlabel("Years")
 plt.ylabel("Salary")
 plt.show()
